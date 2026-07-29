@@ -4,6 +4,14 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Altus Performance — Sport management, built by a coach',
   description: 'The all-in-one platform for school sport departments: performance testing, teams, fixtures, a parent portal, and real-time safety alerts. Built by a coach who got tired of spreadsheets.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180' }],
+  },
 };
 
 export const viewport: Viewport = {
