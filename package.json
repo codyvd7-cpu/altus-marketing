@@ -1,0 +1,25 @@
+{
+  "name": "altus-marketing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+   "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^15.4.8",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "resend": "^4.0.1",
+    "lucide-react": "^0.469.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5",
+    "tailwindcss": "^4",
+    "@tailwindcss/postcss": "^4"
+  }
+}

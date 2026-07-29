@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --bg:        #05070d;
+  --bg-2:      #0a0e1a;
+  --surface:   rgba(255,255,255,0.03);
+  --surface-2: rgba(255,255,255,0.05);
+  --line:      rgba(255,255,255,0.08);
+  --line-2:    rgba(255,255,255,0.14);
+  --blue:      #3b82f6;
+  --blue-2:    #60a5fa;
+  --amber:     #f5c86e;
+  --green:     #34d399;
+  --ink:       #f1f4fa;
+  --muted:     #8b93a7;
+  --muted-2:   #5a6278;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-blue: var(--blue);
+  --color-blue-2: var(--blue-2);
+  --color-amber: var(--amber);
+  --color-green: var(--green);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
+  --font-display: 'Big Shoulders', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+:focus-visible { outline: 2px solid var(--blue-2); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+.font-display { font-family: var(--font-display); }
+.font-mono { font-family: var(--font-mono); }
+
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(20px);
+}
+.glass:hover { background: var(--surface-2); border-color: var(--line-2); }
+
+.hero-glow {
+  background:
+    radial-gradient(ellipse 900px 500px at 15% 0%, rgba(59,130,246,0.16), transparent 60%),
+    radial-gradient(ellipse 700px 400px at 90% 20%, rgba(245,200,110,0.08), transparent 60%);
+}
+
+.grain {
+  background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px);
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float { animation: float-slow 6s ease-in-out infinite; }
